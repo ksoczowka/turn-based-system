@@ -19,7 +19,7 @@ class Item {
     std::string getName() { return name_; }
     Rarity getRarity() { return rarity_; }
 
- private:
+ protected:
     std::string name_;
     Rarity rarity_;
 };
