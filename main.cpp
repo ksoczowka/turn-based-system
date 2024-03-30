@@ -6,9 +6,9 @@ int main() {
 
     Logger* logger = Logger::GetInstance(); // built-in logger to make your life easier!
 
-    Game game = Game(); // one class to manage them all
+    Player player = Player("Kris", 100, 1);
 
-    game.makePlayer("Player Name", 20, 1);
+    logger->log("Created player: " + player.getName());
     
     return 0;
 }
