@@ -50,5 +50,6 @@ void Player::takeDamage(const unsigned int& amount) {
 
     if(currentHP_ <= 0) {
         std::clog << "Player " << name_ << " is dead!\n";
+        currentHP_ = 0;
     }
 }
