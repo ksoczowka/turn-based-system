@@ -17,6 +17,8 @@ class Player {
     void giveExp(const int& exp);
     void showPlayerInfo();
 
+    void takeDamage(const unsigned int& amount);
+
  private:
     void levelUp_();
     unsigned int calcNextLevelExp_();
