@@ -16,6 +16,7 @@ class Player {
 
     void giveExp(const int& exp);
     void showPlayerInfo();
+    std::string returnPlayerInfo();
 
     void takeDamage(const unsigned int& amount);
 

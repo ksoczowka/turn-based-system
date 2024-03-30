@@ -45,6 +45,10 @@ void Player::showPlayerInfo() {
                 << "Exp: " << exp_ << '/' << nextLevelExp_ << '\n';
 }
 
+std::string Player::returnPlayerInfo() {
+    return name_ + ": HP: " + std::to_string(currentHP_) + "/" + std::to_string(maxHP_) + " | Level: " + std::to_string(level_) + " | Exp: " + std::to_string(exp_) + '/' + std::to_string(nextLevelExp_);
+}
+
 void Player::takeDamage(const unsigned int& amount) {
     currentHP_ -= amount;
 
