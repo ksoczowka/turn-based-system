@@ -1,4 +1,4 @@
-#include "../include/item.hpp"
+#include "../include/items/item.hpp"
 
 Item::Item() {
     name_ = "Default Item";

@@ -1,4 +1,4 @@
-#include "../include/enemy.hpp"
+#include "../include/entities/enemy.hpp"
 
 Enemy::Enemy() {
     name_ = "Default Enemy";
