@@ -4,12 +4,11 @@
 
 int main() {
 
-    Logger* logger = Logger::GetInstance();
+    Logger* logger = Logger::GetInstance(); // built-in logger to make your life easier!
 
-    Player player = Player("Higami", 10, 1);
-    logger->log("Created Player: " + player.returnPlayerInfo());
+    Game game = Game(); // one class to manage them all
 
-    logger->showHistory();
+    game.makePlayer("Player Name", 20, 1);
     
     return 0;
 }
