@@ -1,4 +1,4 @@
-#include "../include/entities/player.hpp"
+#include "../../include/entities/player.hpp"
 
 #include <iostream>
 
