@@ -1,4 +1,4 @@
-#include "../include/player.hpp"
+#include "../include/entities/player.hpp"
 
 #include <iostream>
 
@@ -43,4 +43,12 @@ void Player::showPlayerInfo() {
                 << "HP: " << currentHP_ << '/' << maxHP_ << " | "
                 << "Level: " << level_ << " | " 
                 << "Exp: " << exp_ << '/' << nextLevelExp_ << '\n';
+}
+
+void Player::takeDamage(const unsigned int& amount) {
+    currentHP_ -= amount;
+
+    if(currentHP_ <= 0) {
+        std::clog << "Player " << name_ << " is dead!\n";
+    }
 }
