@@ -3,11 +3,13 @@
 #include <iostream>
 
 int main() {
+
+    Logger* logger = Logger::GetInstance();
+
     Player player = Player("Higami", 10, 1);
+    logger->log("Created Player: " + player.returnPlayerInfo());
 
-    player.showPlayerInfo();
-    player.giveExp(123);
-    player.showPlayerInfo();
-
+    logger->showHistory();
+    
     return 0;
 }
