@@ -38,7 +38,7 @@ unsigned int Player::calcNextLevelExp_() {
     return (level_ * 100) * expMultiplier_;
 }
 
-void Player::showPlayerInfo() {
+void Player::showInfo() {
     std::cout << name_ << ": "
                 << "HP: " << currentHP_ << '/' << maxHP_ << " | "
                 << "Level: " << level_ << " | " 
