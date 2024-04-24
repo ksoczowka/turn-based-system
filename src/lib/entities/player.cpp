@@ -6,8 +6,8 @@ Player::Player() {
     name_ = "Default Player";
     currentHP_ = 10;
     maxHP_ = 10;
-    expMultiplier_ = 0.69;
     level_ = 1;
+    expMultiplier_ = 0.69;
     nextLevelExp_ = calcNextLevelExp_();
 }
 

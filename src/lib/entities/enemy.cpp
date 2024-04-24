@@ -2,12 +2,14 @@
 
 Enemy::Enemy() {
     name_ = "Default Enemy";
-    hp_ = 10;
+    currentHP_ = 10;
+    maxHP_ = 10;
     level_ = 1;
 }
 
 Enemy::Enemy(const std::string& name, const int& hp, const int& level) {
     name_ = name;
-    hp_ = hp;
+    currentHP_ = hp;
+    maxHP_ = hp;
     level_ = level;
 }
