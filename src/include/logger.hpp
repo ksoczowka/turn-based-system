@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -10,7 +11,7 @@ class Logger {
 
     Logger operator=(const Logger&) = delete;
 
-    static Logger *GetInstance();
+    static std::shared_ptr<Logger> GetInstance();
 
     void log(const std::string& message) {
         history_.push_back(message);
@@ -27,15 +28,15 @@ class Logger {
  protected:
     Logger() {}
 
-    static Logger* instance_;
+    static std::shared_ptr<Logger> instance_;
 
     std::vector<std::string> history_;
 };
 
-Logger* Logger::instance_ = nullptr;
-Logger *Logger::GetInstance() {
+std::shared_ptr<Logger> Logger::instance_ = nullptr;
+std::shared_ptr<Logger> Logger::GetInstance() {
     if(instance_ == nullptr) {
-        instance_ = new Logger();
+        instance_ = std::shared_ptr<Logger>(new Logger());
     }
 
     return instance_;
