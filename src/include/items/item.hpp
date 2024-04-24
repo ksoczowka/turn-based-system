@@ -14,14 +14,13 @@ enum class Rarity {
 class Item {
  public:
     Item();
-    Item(const std::string& name, const Rarity& rarity, const int& dropChance); // Set name, rarity and dropChance (in percents)
+    Item(const std::string& name, const Rarity& rarity); // Set name, rarity and dropChance (in percents)
 
-    int getDropChance() { return dropChance_; } // Returns drop chance of the item
     std::string getName() { return name_; } // Returns name of the item
     Rarity getRarity() { return rarity_; } // Returns rarity of the item
 
+    virtual void use();
  protected:
-    int dropChance_; // Percentage chance of item drop from any source
     std::string name_; // Name of the item
     Rarity rarity_; // Category of how rare the drop should be
 };

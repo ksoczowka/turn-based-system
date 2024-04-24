@@ -6,6 +6,7 @@ class Weapon : public Item {
  public:
     Weapon();
 
+    void use();
  private:
     int reach_;
     int damage_;
