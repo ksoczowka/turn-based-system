@@ -12,8 +12,8 @@ class Entity {
     unsigned int getLevel() { return level_; }
     unsigned int getExp() { return exp_; }
 
-    virtual void attack(Entity& attacker, Entity& defender);
-    virtual void showInfo();
+    virtual void attack(Entity& attacker, Entity& defender) {}
+    virtual void showInfo() {}
  protected:
     std::string name_;
     int currentHP_;

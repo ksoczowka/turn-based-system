@@ -12,7 +12,7 @@ class Player : public Entity {
     unsigned int getNextLevelExp() { return nextLevelExp_; }
 
     void giveExp(const int& exp);
-    void showInfo();
+    void showInfo() override;
     std::string returnPlayerInfo();
 
     void takeDamage(const unsigned int& amount);

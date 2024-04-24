@@ -19,7 +19,7 @@ class Item {
     std::string getName() { return name_; } // Returns name of the item
     Rarity getRarity() { return rarity_; } // Returns rarity of the item
 
-    virtual void use();
+    virtual void use() {}
  protected:
     std::string name_; // Name of the item
     Rarity rarity_; // Category of how rare the drop should be
